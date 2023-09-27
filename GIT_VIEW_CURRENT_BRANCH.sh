@@ -12,7 +12,8 @@ command_to_alias="\"git branch | grep '*' | cut -d ' ' -f 2\""
 echo "alias $new_alias=$command_to_alias" >> ~/.bashrc
 
 # Reload the user's shell to make the alias immediately available
-source ~/.bashrc
+#source ~/.bashrc
+exec bash
 
 # Display a message indicating the alias has been added
 echo "Alias '$new_alias' for '$command_to_alias' has been added to your system."
